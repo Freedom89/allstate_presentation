@@ -13747,9 +13747,9 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 <h2 id="Early-Stopping-of-Neural-Networks">Early Stopping of Neural Networks<a class="anchor-link" href="#Early-Stopping-of-Neural-Networks">&#182;</a></h2><p>Its easy!</p>
 <div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">nn_model</span><span class="p">()</span>
 
-<span class="n">callsback_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>\
-          <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="s1">&#39;keras-regressor-&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.check&#39;</span>\
-                          <span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">save_best_only</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+<span class="n">callsback_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> \
+                  <span class="n">ModelCheckpoint</span><span class="p">(</span><span class="s1">&#39;keras-regressor-&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.check&#39;</span><span class="p">,</span>\
+                  <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">save_best_only</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
 
 <span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">generator</span> <span class="o">=</span> <span class="n">batch_generator</span><span class="p">(</span><span class="n">xtr</span><span class="p">,</span> <span class="n">ytr</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
                           <span class="n">nb_epoch</span> <span class="o">=</span> <span class="n">nepochs</span><span class="p">,</span>
@@ -13761,6 +13761,48 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 <span class="n">fit</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;keras-regressor-&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.check&#39;</span><span class="p">)</span>
 </pre></div>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Results-so-far">Results so far<a class="anchor-link" href="#Results-so-far">&#182;</a></h2><ul>
+<li>With simple averaging / using leaderboard as a feedback, i got into top 5%. </li>
+<li>With that, i changed my goal to top 5%! </li>
+<li>I needed more safety net to ensure that i would be in the top 5% </li>
+</ul>
+<h2 id="Side-note">Side note<a class="anchor-link" href="#Side-note">&#182;</a></h2><ul>
+<li>With the best submission of this approach, i would have gotten rank 276 which barely made it to top 10%.</li>
+<li>There were a sudden surge of experts entering the competition (as an earlier one ended). </li>
+<li>Possibly other factors as people started stacking their models. </li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Horrors!">Horrors!<a class="anchor-link" href="#Horrors!">&#182;</a></h2><p>The moment i decided to do stacking (with 7days remaining), i realized i do not have my out-of-fold predictions.</p>
+<p>For those of you who are not familar with stacking, here is a high level idea:</p>
+<ul>
+<li>Take your data set, split into n-folds.</li>
+<li>Train your model with (n-1) folds and predict on the remaining fold (out of bag) and the test set. </li>
+<li>Combine (stack) the predictions on the remaining folds </li>
+<li>Average the predictions for the test set.</li>
+<li>These will form the meta-features for your second level modeling, which is stacking.</li>
+</ul>
+<h2 id="Mistakes!">Mistakes!<a class="anchor-link" href="#Mistakes!">&#182;</a></h2><ul>
+<li>As my folds were very different in terms of cv-score, i had to use early stopping. </li>
+<li>Try to make cv-scores across folds more consistent. (It turns out that it did not help much, and it worked well for this competition) </li>
+<li>Majority of the errors came from data points which has high target values, etc 9000 but model predicts 5000 which contributed significantly to the MAE.</li>
+</ul>
+<h4 id="Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">Thus, i had to re-train all my previous models, and one additional random forest and extra trees each with out of bag predictions!<a class="anchor-link" href="#Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">&#182;</a></h4>
 </div>
 </div>
 </div></section></section><section><section>
