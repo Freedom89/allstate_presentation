@@ -11924,6 +11924,24 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<section>
+    <h1> Contents </h1> 
+
+    <p> - Competition 
+    <p> - Features 
+    <p> - Xgboost 
+    <p> - Keras
+    <p> - Stacking 
+
+</section>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Competition-background">Competition background<a class="anchor-link" href="#Competition-background">&#182;</a></h2><p><q>In this recruitment challenge, Kagglers are invited to show off their creativity and flex their technical chops by creating an algorithm which accurately predicts claims severity. Aspiring competitors will demonstrate insight into better ways to predict claims severity for the chance to be part of Allstate’s efforts to ensure a worry-free customer experience.</q></p>
 <ul>
 <li>MAE (mean absolute error) </li>
@@ -11938,7 +11956,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Xgb-Interactions">Xgb Interactions<a class="anchor-link" href="#Xgb-Interactions">&#182;</a></h2><ul>
+<h2 id="Features---Xgb-Interactions">Features - Xgb Interactions<a class="anchor-link" href="#Features---Xgb-Interactions">&#182;</a></h2><ul>
 <li>Use <a href="https://github.com/Far0n/xgbfi">Xgbfi</a> by far0n to find N-way interactions for categorical features </li>
 </ul>
 <table>
@@ -11981,7 +11999,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Engineering---boxcox">Feature Engineering - boxcox<a class="anchor-link" href="#Feature-Engineering---boxcox">&#182;</a></h2><p>Other than log the target as well as standardization of input features,</p>
+<h2 id="Features---Feature-Engineering-(-boxcox-)">Features - Feature Engineering ( boxcox )<a class="anchor-link" href="#Features---Feature-Engineering-(-boxcox-)">&#182;</a></h2><p>Other than log the target as well as standardization of input features,</p>
 <p>Boxcox which aims to provide an automatic way of transforming your (cont) features to make it more even (normal).</p>
 
 </div>
@@ -12158,7 +12176,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Encoding-of-Categorical-features">Encoding of Categorical features<a class="anchor-link" href="#Encoding-of-Categorical-features">&#182;</a></h2><p>Most common (two) types of encoding (i know),</p>
+<h2 id="Features---Encoding-of-Categorical-features">Features - Encoding of Categorical features<a class="anchor-link" href="#Features---Encoding-of-Categorical-features">&#182;</a></h2><p>Most common (two) types of encoding (i know),</p>
 <ul>
 <li>Label Encoding</li>
 </ul>
@@ -12224,7 +12242,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lexical-Encoding">Lexical Encoding<a class="anchor-link" href="#Lexical-Encoding">&#182;</a></h2><p>Example:</p>
+<h2 id="Features---Lexical-Encoding">Features - Lexical Encoding<a class="anchor-link" href="#Features---Lexical-Encoding">&#182;</a></h2><p>Example:</p>
 
 </div>
 </div>
@@ -12276,7 +12294,16 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="XGBOOST---Learning-Task-Parameters">XGBOOST - Learning Task Parameters<a class="anchor-link" href="#XGBOOST---Learning-Task-Parameters">&#182;</a></h2><p>If you refer to the xgboost parameters documentation <a href="https://github.com/dmlc/xgboost/blob/master/doc/parameter.md">here</a>,</p>
+<h1 id="XGBOOST">XGBOOST<a class="anchor-link" href="#XGBOOST">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="XGBOOST---Understanding-Learning-Task-Parameters">XGBOOST - Understanding Learning Task Parameters<a class="anchor-link" href="#XGBOOST---Understanding-Learning-Task-Parameters">&#182;</a></h2><p>If you refer to the xgboost parameters documentation <a href="https://github.com/dmlc/xgboost/blob/master/doc/parameter.md">here</a>,</p>
 <p>Specify the learning task and the corresponding learning objective. The objective options are below:</p>
 <ul>
 <li><p>objective [ default=reg:linear ]</p>
@@ -12305,7 +12332,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Xgb---Eval">Xgb - Eval<a class="anchor-link" href="#Xgb---Eval">&#182;</a></h2><ul>
+<h2 id="XGBOOST---Understanding-Eval">XGBOOST - Understanding Eval<a class="anchor-link" href="#XGBOOST---Understanding-Eval">&#182;</a></h2><ul>
 <li>eval_metric [ default according to objective ]<ul>
 <li>"rmse": <a href="http://en.wikipedia.org/wiki/Root_mean_square_error">root mean square error</a></li>
 <li><strong>"mae"</strong>: <a href="https://en.wikipedia.org/wiki/Mean_absolute_error">mean absolute error</a></li>
@@ -12324,7 +12351,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="XGB">XGB<a class="anchor-link" href="#XGB">&#182;</a></h2><p>The learning objective as 'Linear' while the evaluation metric is 'mae', what can we do?</p>
+<h2 id="XGBOOST---Problem!">XGBOOST - Problem!<a class="anchor-link" href="#XGBOOST---Problem!">&#182;</a></h2><p>The learning objective as 'Linear' while the evaluation metric is 'mae', what can we do?</p>
 <h3 id="Additional-Math:">Additional Math:<a class="anchor-link" href="#Additional-Math:">&#182;</a></h3><p>It turns out that when you are optimizing for Mean Squared Error, finding the <strong>Mean</strong> optimizes the error.
 If you are optimizing for mean absolute error, finding the <strong>Median</strong> optimizes the error. Example:</p>
 
@@ -12376,7 +12403,7 @@ decreasing 1 point from median:  693.1533366
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Gradient-Descent--of-L1-and-L2">Gradient Descent  of L1 and L2<a class="anchor-link" href="#Gradient-Descent--of-L1-and-L2">&#182;</a></h2>
+<h2 id="XGBOOST---Gradient-Descent--of-L1-and-L2">XGBOOST - Gradient Descent  of L1 and L2<a class="anchor-link" href="#XGBOOST---Gradient-Descent--of-L1-and-L2">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12412,7 +12439,7 @@ decreasing 1 point from median:  693.1533366
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L1-gradient-descent">L1 gradient descent<a class="anchor-link" href="#L1-gradient-descent">&#182;</a></h2><p>Note that it takes close to 50 seconds</p>
+<h2 id="XGBOOST---L1-gradient-descent">XGBOOST - L1 gradient descent<a class="anchor-link" href="#XGBOOST---L1-gradient-descent">&#182;</a></h2><p>Note that it takes close to 50 seconds</p>
 
 </div>
 </div>
@@ -12473,7 +12500,7 @@ The time taken is, :  51.343307972
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L2-gradient-descent">L2 gradient descent<a class="anchor-link" href="#L2-gradient-descent">&#182;</a></h2><p>Much faster!</p>
+<h2 id="XGBOOST---L2-gradient-descent">XGBOOST - L2 gradient descent<a class="anchor-link" href="#XGBOOST---L2-gradient-descent">&#182;</a></h2><p>Much faster!</p>
 
 </div>
 </div>
@@ -12527,7 +12554,7 @@ The time taken is, :  2.23547005653
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L2-gradient-descent-with-log-transformed-features">L2 gradient descent with log-transformed features<a class="anchor-link" href="#L2-gradient-descent-with-log-transformed-features">&#182;</a></h2><p>Recall that L2 penalizes more for points far away from the mean, while mae penalizes equally throughout.</p>
+<h2 id="XGBOOST---L2-gradient-descent-with-log-transformed-features">XGBOOST - L2 gradient descent with log-transformed features<a class="anchor-link" href="#XGBOOST---L2-gradient-descent-with-log-transformed-features">&#182;</a></h2><p>Recall that L2 penalizes more for points far away from the mean, while mae penalizes equally throughout.</p>
 <p>In that case, we can transform the features with log.</p>
 
 </div>
@@ -12578,7 +12605,7 @@ The error by using log-mean is:  702.006505008
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="L2-gradient-descent-with-log-transformed-features">L2 gradient descent with log-transformed features<a class="anchor-link" href="#L2-gradient-descent-with-log-transformed-features">&#182;</a></h2>
+<h2 id="XGBOOST---L2-gradient-descent-with-log-transformed-features">XGBOOST - L2 gradient descent with log-transformed features<a class="anchor-link" href="#XGBOOST---L2-gradient-descent-with-log-transformed-features">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12632,7 +12659,7 @@ The time taken is, :  9.32033610344
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Another-example">Another example<a class="anchor-link" href="#Another-example">&#182;</a></h2><p>Notice that calculating the median is almost 20 times slower!</p>
+<h2 id="XGBOOST---Another-example">XGBOOST - Another example<a class="anchor-link" href="#XGBOOST---Another-example">&#182;</a></h2><p>Notice that calculating the median is almost 20 times slower!</p>
 
 </div>
 </div>
@@ -12678,7 +12705,7 @@ the median is:  694.0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>Optimizing by MAE is still the best option! But there is no obejctive for MAE, what do we do?</p>
+<h2 id="XGBOOST---Conclusion">XGBOOST - Conclusion<a class="anchor-link" href="#XGBOOST---Conclusion">&#182;</a></h2><p>Optimizing by MAE is still the best option! But there is no obejctive for MAE, what do we do?</p>
 <p>For those who are familar, you may know that $y = |x|$ is not differentiable at $x=0$.</p>
 <p>As seen from the following graph, when performing gradient descent is going to be very tricky.</p>
 
@@ -12893,7 +12920,7 @@ DgJmZi3MQcDMrIU5CJiZtTAHATOzFuYgYGbWwv4/xcvoqosd2BAAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Numercial-approximation">Numercial approximation<a class="anchor-link" href="#Numercial-approximation">&#182;</a></h2><p>I will skip the details but it turns out that there is a very nice function called the <code>fair</code> function that 'smooths' the gradient of the MAE function.</p>
+<h2 id="XGBOOST---Numercial-approximation">XGBOOST - Numercial approximation<a class="anchor-link" href="#XGBOOST---Numercial-approximation">&#182;</a></h2><p>I will skip the details but it turns out that there is a very nice function called the <code>fair</code> function that 'smooths' the gradient of the MAE function.</p>
 <p>Function = $c^2 [\frac{|x|}{c} - log(1+\frac{|x|}{c}]$, Jacob = $\frac{x}{1+\frac{|x|}{c}}$, Hess = $\frac{1}{1+\frac{|x|}{c}}$</p>
 <p>If you are still interested, click <a href="http://research.microsoft.com/en-us/um/people/zhang/INRIA/Publis/Tutorial-Estim/node24.html">here</a>.</p>
 <p>Lets define the code for the fair function:</p>
@@ -12934,7 +12961,7 @@ DgJmZi3MQcDMrIU5CJiZtTAHATOzFuYgYGbWwv4/xcvoqosd2BAAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Visualizing-the-fair-function">Visualizing the fair function<a class="anchor-link" href="#Visualizing-the-fair-function">&#182;</a></h2>
+<h2 id="XGBOOST---Visualizing-the-fair-function">XGBOOST - Visualizing the fair function<a class="anchor-link" href="#XGBOOST---Visualizing-the-fair-function">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13217,7 +13244,7 @@ Y4wxWDIwxhiDJQNjjDFYMjDGGIMlA2OMMcD/A+X9Imga9G3AAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fair-function">Fair function<a class="anchor-link" href="#Fair-function">&#182;</a></h2><p>Notice that there is a parameter within the fair function <code>c</code>. The smaller the value of c, the closer it approximates the <code>MAE</code> function. Suppose we increase <code>0.1</code> to <code>1</code> instead:</p>
+<h2 id="XGBOOST---Fair-function">XGBOOST - Fair function<a class="anchor-link" href="#XGBOOST---Fair-function">&#182;</a></h2><p>Notice that there is a parameter within the fair function <code>c</code>. The smaller the value of c, the closer it approximates the <code>MAE</code> function. Suppose we increase <code>0.1</code> to <code>1</code> instead:</p>
 <p><strong> You can probably notice that the higher the 'c' parameter is, the smoother the computation and hence lesser training time at the cost of accuracy. </strong></p>
 
 </div>
@@ -13532,7 +13559,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fair-function-in-xgb">Fair function in xgb<a class="anchor-link" href="#Fair-function-in-xgb">&#182;</a></h2><p>So how do i do this with XGB? Start by defining the fair objective:</p>
+<h2 id="XGBOOST---Fair-function-in-xgb">XGBOOST - Fair function in xgb<a class="anchor-link" href="#XGBOOST---Fair-function-in-xgb">&#182;</a></h2><p>So how do i do this with XGB? Start by defining the fair objective:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fair_obj</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">dtrain</span><span class="p">):</span>
     <span class="n">fair_constant</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">dtrain</span><span class="o">.</span><span class="n">get_label</span><span class="p">()</span>
@@ -13551,7 +13578,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fair-function-in-xgb">Fair function in xgb<a class="anchor-link" href="#Fair-function-in-xgb">&#182;</a></h2><p>And feed it inside <code>xgb.train</code>:</p>
+<h2 id="XGBOOST---Fair-function-in-xgb">XGBOOST - Fair function in xgb<a class="anchor-link" href="#XGBOOST---Fair-function-in-xgb">&#182;</a></h2><p>And feed it inside <code>xgb.train</code>:</p>
 <div class="highlight"><pre><span></span><span class="n">xgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="p">,</span>
             <span class="n">d_train</span><span class="p">,</span>
             <span class="mi">100000</span><span class="p">,</span>
@@ -13598,7 +13625,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h2><p>It turns out to be really easy to build Neural Networks with <code>Keras</code>:</p>
+<h2 id="Neural-Networks---Building-one-with-Keras">Neural Networks - Building one with Keras<a class="anchor-link" href="#Neural-Networks---Building-one-with-Keras">&#182;</a></h2><p>It turns out to be really easy to build Neural Networks with <code>Keras</code>:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nn_model</span><span class="p">():</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
 
@@ -13635,10 +13662,10 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Training-and-tuning-NN.">Training and tuning NN.<a class="anchor-link" href="#Training-and-tuning-NN.">&#182;</a></h2><ul>
+<h2 id="Neural-Networks--Training-and-tuning-NN.">Neural Networks -Training and tuning NN.<a class="anchor-link" href="#Neural-Networks--Training-and-tuning-NN.">&#182;</a></h2><ul>
 <li><p>One simple improvement (or quick win) is to bag the neural networks.</p>
 </li>
-<li><p>However with my mac book pro, it would still take (40<em>55</em>10 = 22000 seconds) 6.1 hours just for training one model alone!</p>
+<li><p>However with my mac book pro, it would still take (40*55*10 = 22000 seconds) 6.1 hours just for training one model alone!</p>
 </li>
 <li><p>Bagging it 10 times would take close to 3 days which is roughly what the fourms reported.</p>
 </li>
@@ -13654,7 +13681,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Training-NN-on-AWS-(CUDA)">Training NN on AWS (CUDA)<a class="anchor-link" href="#Training-NN-on-AWS-(CUDA)">&#182;</a></h2><ul>
+<h2 id="Neural-Networks---Training-NN-on-AWS-(CUDA)">Neural Networks - Training NN on AWS (CUDA)<a class="anchor-link" href="#Neural-Networks---Training-NN-on-AWS-(CUDA)">&#182;</a></h2><ul>
 <li>There were about 10-12 remaining days into the competition.</li>
 <li>No choice but to learn how to set up GPU instances on AWS. (Spend slightly over a day to figured it out) </li>
 <li>Wrote my own small tutorial <a href="https://github.com/Freedom89/aws_configure/blob/master/AWS_ec2_deep_learning_stack.md">here</a>.</li>
@@ -13689,7 +13716,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Some-Tricks-with-NN">Some Tricks with NN<a class="anchor-link" href="#Some-Tricks-with-NN">&#182;</a></h2><ul>
+<h2 id="Neural-Networks---Some-Tricks-with-NN">Neural Networks - Some Tricks with NN<a class="anchor-link" href="#Neural-Networks---Some-Tricks-with-NN">&#182;</a></h2><ul>
 <li><p>In XGB, you have</p>
 <ul>
 <li><code>early_stopping_rounds = value</code></li>
@@ -13711,7 +13738,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Early-Stopping-of-Neural-Networks">Early Stopping of Neural Networks<a class="anchor-link" href="#Early-Stopping-of-Neural-Networks">&#182;</a></h2><p>Its easy!</p>
+<h2 id="Neural-Networks---Early-Stopping-of-Neural-Networks">Neural Networks - Early Stopping of Neural Networks<a class="anchor-link" href="#Neural-Networks---Early-Stopping-of-Neural-Networks">&#182;</a></h2><p>Its easy!</p>
 <div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">nn_model</span><span class="p">()</span>
 
 <span class="n">callsback_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> \
@@ -13756,7 +13783,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Horrors!">Horrors!<a class="anchor-link" href="#Horrors!">&#182;</a></h2><p>The moment i decided to do stacking (with 7days remaining), i realized i do not have my out-of-fold predictions.</p>
+<h2 id="Stacking---Horrors!">Stacking - Horrors!<a class="anchor-link" href="#Stacking---Horrors!">&#182;</a></h2><p>The moment i decided to do stacking (with 7days remaining), i realized i do not have my out-of-fold predictions.</p>
 <p>For those of you who are not familar with stacking, here is a high level idea:</p>
 <ul>
 <li>Take your data set, split into n-folds.</li>
@@ -13774,7 +13801,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Mistakes!">Mistakes!<a class="anchor-link" href="#Mistakes!">&#182;</a></h2><ul>
+<h2 id="Stacking---Mistakes!">Stacking - Mistakes!<a class="anchor-link" href="#Stacking---Mistakes!">&#182;</a></h2><ul>
 <li>As my folds were very different in terms of cv-score, i had to use early stopping. </li>
 <li>Try to make cv-scores across folds more consistent. (It turns out that it did not help much, and it worked well for this competition) </li>
 <li>Majority of the errors came from data points which has high target values, etc 9000 but model predicts 5000 which contributed significantly to the MAE.</li>
@@ -14183,7 +14210,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Unfortunately...">Unfortunately...<a class="anchor-link" href="#Unfortunately...">&#182;</a></h2><ul>
+<h2 id="Stacking---Unfortunately...">Stacking - Unfortunately...<a class="anchor-link" href="#Stacking---Unfortunately...">&#182;</a></h2><ul>
 <li>I tried linear regression, but the results is worse than the weighted average approach.</li>
 <li>It made sense, as linear regression uses MSE rather than MAE. </li>
 </ul>
@@ -14200,7 +14227,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="With-(slightly-more-than)-one-day-to-go,">With (slightly more than) one day to go,<a class="anchor-link" href="#With-(slightly-more-than)-one-day-to-go,">&#182;</a></h2><p>I tried Neural Networks instead.</p>
+<h2 id="Stacking---With-(slightly-more-than)-one-day-to-go,">Stacking - With (slightly more than) one day to go,<a class="anchor-link" href="#Stacking---With-(slightly-more-than)-one-day-to-go,">&#182;</a></h2><p>I tried Neural Networks instead.</p>
 <p>The best local cv with the weighted average was <code>1118.345</code></p>
 <p>Here is the output with my first neural network:</p>
 
@@ -14221,7 +14248,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Whats-are-the-first-few-things-to-try?">Whats are the first few things to try?<a class="anchor-link" href="#Whats-are-the-first-few-things-to-try?">&#182;</a></h2><ol>
+<h2 id="Stacking---Whats-are-the-first-few-things-to-try?">Stacking - Whats are the first few things to try?<a class="anchor-link" href="#Stacking---Whats-are-the-first-few-things-to-try?">&#182;</a></h2><ol>
 <li>Tuning <ul>
 <li>Luckily with only 11 features, it is relatively fast (~40minutes) for each model and i have no improvement in local cv.</li>
 <li>No matter what i did, i got results worse than my weighted average cv score. </li>
@@ -14243,7 +14270,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Finally..">Finally..<a class="anchor-link" href="#Finally..">&#182;</a></h2><p>i combine my keras (out of bag) results (consider them third level modeling) and combine with my second level models and ran the weighted average codes.</p>
+<h2 id="Stacking---Finally..">Stacking - Finally..<a class="anchor-link" href="#Stacking---Finally..">&#182;</a></h2><p>i combine my keras (out of bag) results (consider them third level modeling) and combine with my second level models and ran the weighted average codes.</p>
 <p>Below is a summary of what i achieved:</p>
 <table>
 <thead><tr>
