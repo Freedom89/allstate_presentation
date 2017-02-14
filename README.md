@@ -1,3 +1,5 @@
-# Creating Presentation Slides with Jupyter notebook
+# Allstate presentation
 
-Please see [blog post](http://echorand.me/presentation-slides-with-jupyter-notebook.html#.V19WnWJ96V4) on how I created my first slide deck with Jupyer Notebook.
+My slides for this [meetup](https://www.meetup.com/DataScience-SG-Singapore/events/237212482/).
+
+link to the slides: 
