@@ -11921,7 +11921,16 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Competition-background">Competition background<a class="anchor-link" href="#Competition-background">&#182;</a></h2><p><q>In this recruitment challenge, Kagglers are invited to show off their creativity and flex their technical chops by creating an algorithm which accurately predicts claims severity. Aspiring competitors will demonstrate insight into better ways to predict claims severity for the chance to be part of Allstate’s efforts to ensure a worry-free customer experience.</q></p>
+<h2 id="Competition">Competition<a class="anchor-link" href="#Competition">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Competition---background">Competition - background<a class="anchor-link" href="#Competition---background">&#182;</a></h2><p><q>In this recruitment challenge, Kagglers are invited to show off their creativity and flex their technical chops by creating an algorithm which accurately predicts claims severity. Aspiring competitors will demonstrate insight into better ways to predict claims severity for the chance to be part of Allstate’s efforts to ensure a worry-free customer experience.</q></p>
 <ul>
 <li>MAE (mean absolute error) </li>
 <li>Anonymized Features</li>
@@ -11929,6 +11938,195 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Competition---Data">Competition - Data<a class="anchor-link" href="#Competition---Data">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>cat1</th>
+      <th>cat2</th>
+      <th>cat3</th>
+      <th>cat4</th>
+      <th>cat5</th>
+      <th>cat6</th>
+      <th>cat7</th>
+      <th>cat8</th>
+      <th>cat9</th>
+      <th>...</th>
+      <th>cont6</th>
+      <th>cont7</th>
+      <th>cont8</th>
+      <th>cont9</th>
+      <th>cont10</th>
+      <th>cont11</th>
+      <th>cont12</th>
+      <th>cont13</th>
+      <th>cont14</th>
+      <th>loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>...</td>
+      <td>0.718367</td>
+      <td>0.335060</td>
+      <td>0.30260</td>
+      <td>0.67135</td>
+      <td>0.83510</td>
+      <td>0.569745</td>
+      <td>0.594646</td>
+      <td>0.822493</td>
+      <td>0.714843</td>
+      <td>2213.18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>...</td>
+      <td>0.438917</td>
+      <td>0.436585</td>
+      <td>0.60087</td>
+      <td>0.35127</td>
+      <td>0.43919</td>
+      <td>0.338312</td>
+      <td>0.366307</td>
+      <td>0.611431</td>
+      <td>0.304496</td>
+      <td>1283.60</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>...</td>
+      <td>0.289648</td>
+      <td>0.315545</td>
+      <td>0.27320</td>
+      <td>0.26076</td>
+      <td>0.32446</td>
+      <td>0.381398</td>
+      <td>0.373424</td>
+      <td>0.195709</td>
+      <td>0.774425</td>
+      <td>3005.09</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10</td>
+      <td>B</td>
+      <td>B</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>...</td>
+      <td>0.440945</td>
+      <td>0.391128</td>
+      <td>0.31796</td>
+      <td>0.32128</td>
+      <td>0.44467</td>
+      <td>0.327915</td>
+      <td>0.321570</td>
+      <td>0.605077</td>
+      <td>0.602642</td>
+      <td>939.85</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>...</td>
+      <td>0.178193</td>
+      <td>0.247408</td>
+      <td>0.24564</td>
+      <td>0.22089</td>
+      <td>0.21230</td>
+      <td>0.204687</td>
+      <td>0.202213</td>
+      <td>0.246011</td>
+      <td>0.432606</td>
+      <td>2763.85</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 132 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -13782,6 +13980,9 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 <li>Average the predictions for the test set.</li>
 <li>These will form the meta-features for your second level modeling, which is stacking.</li>
 </ul>
+<h4 id="Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">Thus, i had to re-train all my previous models, and one additional random forest and extra trees each with out of bag predictions!<a class="anchor-link" href="#Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">&#182;</a></h4><ul>
+<li>I also trained a few other models, such as Neural Network without log-transform</li>
+</ul>
 
 </div>
 </div>
@@ -13793,11 +13994,8 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Stacking---Mistakes!">Stacking - Mistakes!<a class="anchor-link" href="#Stacking---Mistakes!">&#182;</a></h2><ul>
 <li>As my folds were very different in terms of cv-score, i had to use early stopping. </li>
-<li>Try to make cv-scores across folds more consistent. (It turns out that it did not help much, and it worked well for this competition) </li>
+<li>Try to make cv-scores across folds more consistent. (It turns out that it did not help much, and i still had descent results) </li>
 <li>Majority of the errors came from data points which has high target values, etc 9000 but model predicts 5000 which contributed significantly to the MAE.</li>
-</ul>
-<h4 id="Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">Thus, i had to re-train all my previous models, and one additional random forest and extra trees each with out of bag predictions!<a class="anchor-link" href="#Thus,-i-had-to-re-train-all-my-previous-models,-and-one-additional-random-forest-and-extra-trees-each-with-out-of-bag-predictions!">&#182;</a></h4><ul>
-<li>I also trained a few other models, such as Neural Network without log-transform</li>
 </ul>
 
 </div>
@@ -14217,7 +14415,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Stacking---With-(slightly-more-than)-one-day-to-go,">Stacking - With (slightly more than) one day to go,<a class="anchor-link" href="#Stacking---With-(slightly-more-than)-one-day-to-go,">&#182;</a></h2><p>I tried Neural Networks instead.</p>
+<h2 id="Stacking---With-(slightly-more-than)-one-day-to-go,">Stacking - With (slightly more than) one day to go,<a class="anchor-link" href="#Stacking---With-(slightly-more-than)-one-day-to-go,">&#182;</a></h2><p>I decided to try Neural Networks instead.</p>
 <p>The best local cv with the weighted average was <code>1118.345</code></p>
 <p>Here is the output with my first neural network:</p>
 
@@ -14227,8 +14425,9 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 ('Fold ', 4, '- MAE:', 1121.9982577768997)
 ('Fold ', 5, '- MAE:', 1119.6595219061744)
 ('Total - MAE:', 1117.9049057391971)</code></pre>
+<p><strong>Finally! Some improvement! </strong></p>
 <p>And the private LB would have given me position 53!</p>
-<p>Clearly i am onto something, right?</p>
+<p>Clearly i am onto something, right? <strong>No.</strong></p>
 
 </div>
 </div>
@@ -14240,8 +14439,8 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Stacking---Whats-are-the-first-few-things-to-try?">Stacking - Whats are the first few things to try?<a class="anchor-link" href="#Stacking---Whats-are-the-first-few-things-to-try?">&#182;</a></h2><ol>
 <li>Tuning <ul>
-<li>Luckily with only 11 features, it is relatively fast (~40minutes) for each model and i have no improvement in local cv.</li>
-<li>No matter what i did, i got results worse than my weighted average cv score. </li>
+<li>Luckily with only 11 features, it is relatively fast (~40minutes) for each model to try new params.</li>
+<li>Unfortunately, no matter what i did, i got results worse than my weighted average cv score. </li>
 <li>With no choice, i resorted to bagging</li>
 </ul>
 </li>
@@ -14306,15 +14505,7 @@ mAUBY4wpxiwIGGNMMWZBwBhjijELAsYYU4z9P8BOz6gN5OQDAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<section>
-    <center>
-        <h1> End! </h1>
-        <br>
-        <h1> Hope you found it useful! </h1>
-
-    </center>
-
-</section>
+<h1 id="END">END<a class="anchor-link" href="#END">&#182;</a></h1><h1 id="Hope-you-have-enjoyed-it!">Hope you have enjoyed it!<a class="anchor-link" href="#Hope-you-have-enjoyed-it!">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
